@@ -1,10 +1,12 @@
 class JobsController < ApplicationController
   
   def index
+    @title = 'Job List'
     @jobs = Job.all
   end
   
   def new
+    @title = 'New Job'
     @job = Job.new
   end
   
@@ -19,11 +21,13 @@ class JobsController < ApplicationController
   
   def show
     @job = Job.find(params[:id])
+    #@title = @job.title          // will be added later
     @owner = @job.owner
   end
   
   def edit
     @job = Job.find(params[:id])
+    #@title = "Edit Job:" + @job.title // will be added later
     @owner = @job.owner
   end
   

@@ -1,1 +1,9 @@
-%strong= "hello world"
+%p Welcome to the job board!
+%ul#menu
+   %li
+      = link_to 'Browse jobs', jobs_path
+      = '(' + @jobs.count.to_s + ')'
+   %li
+      = link_to 'Add a new job', new_job_path
+   
+   
