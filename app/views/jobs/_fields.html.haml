@@ -1,0 +1,18 @@
+- form_for @job do |f|
+   .field
+      = f.label :title
+      = f.text_field :title
+   .field
+      = f.label :location
+      = f.text_field :location
+   .field
+      = f.label :description
+      = f.text_field :description
+   .field                        
+      = f.label :owner_id         #to be removed, obviously...        
+      = f.text_field :owner_id      
+   .action
+      - if @job.new_record?
+         = f.submit "New Job"
+      - else
+         = f.submit "Edit Job"
