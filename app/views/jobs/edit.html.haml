@@ -1,0 +1,14 @@
+#edit_job
+   %h1 Editing Job: #{@job.id}
+   - form_for @job do |f|
+      .field
+         = f.label :location
+         = f.text_field :location
+      .field
+         = f.label :description
+         = f.text_field :description
+      .field                        
+         = f.label :owner_id         #to be removed, obviously...        
+         = f.text_field :owner_id      
+      .action
+         = f.submit "Add Job"

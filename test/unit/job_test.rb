@@ -6,3 +6,16 @@ class JobTest < ActiveSupport::TestCase
     assert true
   end
 end
+
+# == Schema Information
+#
+# Table name: jobs
+#
+#  id          :integer         not null, primary key
+#  created_at  :datetime
+#  updated_at  :datetime
+#  location    :string(255)
+#  description :text
+#  owner_id    :integer
+#
+

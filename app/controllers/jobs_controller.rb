@@ -38,7 +38,7 @@ class JobsController < ApplicationController
   
   def destroy
     Job.find(params[:id]).destroy
-    redirect_to(products_path, :notice => 'Job was successfully deleted.')
+    redirect_to(jobs_path, :notice => 'Job was successfully deleted.')
   end
   
 end

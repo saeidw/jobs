@@ -1,0 +1,11 @@
+#jobs   
+   - @jobs.each do |job|
+      .job
+         %p= job.description
+         %p= job.location
+         %p= job.owner.name
+      = link_to 'edit', edit_job_path(job)
+      = link_to 'delete', job_path(job), :method => :delete
+      
+      %hr
+      
